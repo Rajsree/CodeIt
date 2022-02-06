@@ -21,10 +21,13 @@ public:
     }
     int helper(TreeNode* root, vector<vector<int>> &res) {
         if(root==NULL) return -1;
+        
         int level = max(helper(root->left,res) , helper(root->right,res))+1;
+        
         if(res.size()<=level) {
             res.push_back(vector<int>());
         } 
+        
         res[level].push_back(root->val);
         
         return level;
