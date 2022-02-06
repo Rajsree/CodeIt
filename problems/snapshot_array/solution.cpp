@@ -11,14 +11,12 @@ public:
     }
     
     int snap() {
-        // cur_snap_id++;
          return cur_snap_id++;
     }
     
     int get(int index, int snap_id) {
-        //int val = index(snapshot)at snap_id;
         auto it = a[index].upper_bound(snap_id);
-        if(it!=begin(a[index])) return prev(it)->second;
+        if(it!=a[index].begin()) return prev(it)->second;
         return 0;
         
     }
