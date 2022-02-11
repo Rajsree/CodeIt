@@ -6,6 +6,6 @@ public:
         });
         arr.resize(k);
         sort(arr.begin(),arr.end());
-            return arr;
+        return arr;
     }
 };
