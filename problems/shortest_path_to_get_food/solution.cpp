@@ -35,7 +35,7 @@ public:
                     }
                     
                     if(grid[nx][ny]=='#') {
-                        return dist;;
+                        return dist;
                     }
                 
                     grid[nx][ny] = 'X';
