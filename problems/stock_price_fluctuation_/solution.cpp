@@ -1,5 +1,4 @@
 class StockPrice {
-    int maxPrice = -1 , minPrice = 1e9;
 public:
     map<int,int> stocks; // {timestamp, prices
     multiset<int> prices;
