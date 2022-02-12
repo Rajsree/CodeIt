@@ -2,12 +2,14 @@ class Solution {
 public:
  
     vector<int> res;
-    // vector<int> visited;
     unordered_map<int,int> map;
+    
     vector<int> findOriginalArray(vector<int>& changed) {
         int n = changed.size();
         if(n==0 || (n)%2!=0) return {};
-        sort(changed.begin(),changed.end());
+        
+        sort(changed.begin(),changed.end()); //imp
+        
         for( auto i:changed) {
             map[i]++;
         }
@@ -16,7 +18,7 @@ public:
             int num = changed[i];
             if(map[num] == 0) continue;
             
-            if(map.find(2*num)!=map.end() && map[num]!=0 && map[2*num]!=0) {
+            if(map.find(2*num)!=map.end() && map[num]>0 && map[2*num]>0) {
                 res.push_back(num);
                 map[num]--;
                 map[2*num]--;
