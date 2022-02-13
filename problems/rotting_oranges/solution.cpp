@@ -42,7 +42,7 @@ public:
             }
             if(!rotten.empty()) min++;
         }
-        return tot==cnt ? min : -1;;
+        return tot==cnt ? min : -1;
     }    
 
 };
