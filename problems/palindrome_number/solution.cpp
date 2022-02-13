@@ -8,9 +8,7 @@ public:
             y = y*10 + x%10;
              x /= 10;
         }    
-        if(y==temp) 
-            return true;
-        return false;
+       return y==temp;
         
     }
 };
