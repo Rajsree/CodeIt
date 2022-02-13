@@ -1,8 +1,6 @@
 class Solution {
-public:
-
-    
-    int shortestPath(vector<vector<int>>& grid, int k) {
+	public :
+int shortestPath(vector<vector<int>>& grid, int k) {
         queue<vector<int>> way;
         vector<vector<int>> vis(grid.size(), vector<int>(grid[0].size(),-1));
         
@@ -49,10 +47,4 @@ public:
         }
         return -1;
     }
-};
-// pair x, y
-//Shortest Path (0,0)->(m-1,n-1);
-//if(obs) return 1e9;
-//count <= k {
-
-//} else =>return 1e9;
+    };	
