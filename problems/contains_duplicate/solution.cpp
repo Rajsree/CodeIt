@@ -1,19 +1,19 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        if(nums.size() == 0) {
+        int n= nums.size()-1;
+        
+        if(n <= 0) {
             return false;
         }
         
-       unordered_map<int, int> mymap;
-        
-        for(auto x:nums)
-            if(mymap[x])
+        unordered_set<int> setn;
+        for(int i=0;i<=n;i++) {
+            if(setn.find(nums[i])!=setn.end()){
                 return true;
-            else
-                mymap[x]++;
-        
+            }
+            setn.insert(nums[i]);
+        }
         return false;
-        
     }
 };
