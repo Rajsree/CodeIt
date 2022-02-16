@@ -6,7 +6,7 @@ public:
         
         vector<vector<int>> result;
         
-        sort(intervals.begin(), intervals.end(), [](const auto a, const auto b){
+        sort(intervals.begin(), intervals.end(), [](auto a, auto b){
             return a[0]<b[0];
         });
         result.push_back(intervals[0]);
