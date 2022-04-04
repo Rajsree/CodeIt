@@ -5,11 +5,10 @@
  */
 var twoSum = function(nums, target) {
     if(nums.length == 2) return [0,1];
-    var map = {}, find;
+    var map = {};
     for(var i=0;i<nums.length; i++) {
-        find = map[target-nums[i]];
-        if(find!=undefined) {
-            return [i,find];
+        if(target-nums[i] in map) {
+            return [i,map[target-nums[i]]];
         }
         map[nums[i]] = i;
     }
