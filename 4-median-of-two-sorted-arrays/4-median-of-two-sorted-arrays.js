@@ -4,13 +4,14 @@
  * @return {number}
  */
 var findMedianSortedArrays = function(nums1, nums2) {
-    let merged = [...nums1,...nums2];
-    merged.sort((a,b) => {return a-b});
-    if(merged.length%2==0) {
-        let mid = Math.floor(merged.length/2);
-        return (merged[mid-1] + merged[mid]) / 2;
+    // let merged = [...nums1,...nums2];
+    nums1.push(...nums2);
+    nums1.sort((a,b) => {return a-b});
+    if(nums1.length%2==0) {
+        let mid = Math.floor(nums1.length/2);
+        return (nums1[mid-1] + nums1[mid]) / 2;
     } else {
-        console.log(merged)
-        return merged[Math.floor(merged.length/2)];
+        // console.log(nums1)
+        return nums1[Math.floor(nums1.length/2)];
     }
 };
