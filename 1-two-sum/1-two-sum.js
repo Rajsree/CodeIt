@@ -13,5 +13,5 @@ var twoSum = function(nums, target) {
         }
         map[nums[i]] = i;
     }
-    return [0,0];
+    // return [0,0];
 };
