@@ -3,8 +3,8 @@
  * @return {number}
  */
 var reverse = function(x) {
-    var num = 0;
-    var negative = x<0 ? true : false;
+    let num = 0, negative = false;
+    negative = x<0 ? true : false;
     x = Math.abs(x);
     while(x>0) {
         num = num*10 + x%10;
