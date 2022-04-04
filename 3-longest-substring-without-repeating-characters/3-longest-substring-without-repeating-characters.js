@@ -6,9 +6,9 @@ var lengthOfLongestSubstring = function(s) {
     if(s.length==0) return 0;
     let max = 1;
     
-    for(var i=0; i<s.length-1; i++){
+    for(let i=0; i<s.length-1; i++){
         let substring = ""+s[i];
-        for(var j=i+1; j<s.length; j++) {
+        for(let j=i+1; j<s.length; j++) {
             if(substring.includes(s[j])) {
                 break;
             } else {
