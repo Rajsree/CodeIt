@@ -5,9 +5,9 @@
  */
 var twoSum = function(nums, target) {
     if(nums.length == 2) return [0,1];
-    let map = {};
+    var map = {}, find;
     for(var i=0;i<nums.length; i++) {
-       let find = map[target-nums[i]];
+        find = map[target-nums[i]];
         if(find!=undefined) {
             return [i,find];
         }
