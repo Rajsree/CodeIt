@@ -3,10 +3,15 @@
  * @return {number}
  */
 var reverse = function(x) {
-  const val = x.toString().split('').reverse().join('');
-    if(parseInt(val) > Math.pow(2,31)-1) return 0;
-     if(parseInt(val)*Math.sign(x) < -Math.pow(2,31)) return 0;
-    return parseInt(val) * Math.sign(x);
+    let num = 0, negative = false;
+    negative = x<0 ? true : false;
+    x = Math.abs(x);
+    while(x>0) {
+        num = num*10 + x%10;
+        x = Math.floor(x/10);
+    }
+    if(num > Math.pow(2,31)-1) return 0;
+    return negative ? -1*num : num;
 
 };
 
